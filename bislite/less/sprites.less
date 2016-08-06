@@ -1,0 +1,105 @@
+/* Social icons in footer */
+
+.sprite_dribble { .sprite(@s-dribble); }
+.sprite_facebook {.sprite(@s-facebook); }
+.sprite_linkedin {.sprite(@s-linkedin); }
+.sprite_pinterest {.sprite(@s-pinterest); }
+.sprite_share {.sprite(@s-share); }
+.sprite_skype {.sprite(@s-skype); }
+
+ /* Pagination */
+ [rel="prev"],[rel="next"],[rel="first"],[rel="last"]  {
+     background: url(/images/icons/pagination.png) no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; 
+ } 
+
+[rel="prev"] {
+ 	.sprite(@s-prev-pagination-arrow);
+ 	margin-right: 24px !important;
+}
+
+[rel="next"] {
+  .sprite(@s-next-pagination-arrow);
+  margin-left: 24px !important;
+}
+[rel="first"] {
+  .sprite(@s-first-pagination-arrow);
+  margin-right: 10px !important; 
+}
+
+[rel="last"] {
+  .sprite(@s-last-pagination-arrow);
+  margin-left: 10px !important;
+}
+/* h-sprites*/
+
+.sprite-clean,.sprite-responsive,.sprite-layerd,.sprite-ready{
+    padding: 9px 1px 1px 59px;
+    margin-bottom: 28px;
+	&:before{
+    position: absolute;
+    margin: -10px 0 0 -59px;
+    content: '';
+  }
+}
+
+.sprite-comment-bubble,.sprite-email,.sprite-lw-arrow,.sprite-paint-brush,.sprite-two-men{
+	 padding: 0px 1px 1px 43px;
+  margin-bottom: 15px;
+  &:before{
+    position: absolute;
+    margin: -6px 0 0 -42px;
+    content: '';
+  }
+} 
+.sprite-email{
+	margin-left: 15px;
+}
+.sprite-clean:before{.sprite(@s-clean); } 
+.sprite-responsive:before{.sprite(@s-responsive); }
+.sprite-layerd:before{ .sprite(@s-layerd);}
+.sprite-ready:before{ .sprite(@s-ready); }   
+.sprite-comment-bubble:before{ .sprite(@s-comment-bubble); } 
+.sprite-email:before{.sprite(@s-email);} 
+.sprite-lw-arrow:before{ .sprite(@s-lw-arrow); } 
+.sprite-paint-brush:before{ .sprite(@s-paint-brush); } 
+.sprite-two-men:before{ .sprite(@s-two-men); } 
+/* Buttons */
+.dl-btn{
+  .sprite(@s-dl-btn);
+  display: inline-block;
+  &:hover{
+    .sprite(@s-dl-btn-hover);
+  }
+}
+
+.submit-btn{
+  .sprite(@s-submit-btn);
+  &:hover{
+    .sprite(@s-submit-btn-hover);
+  }
+}
+/* Owl-carousel */
+
+.owl-prev{
+   .sprite(@s-arrow-left);
+  &:hover{
+    .sprite(@s-arrow-left-hover);
+  }
+}
+.owl-next{
+  .sprite(@s-arrow-right);
+  &:hover{
+    .sprite(@s-arrow-right-hover);
+  }
+  
+}
+/* Other */
+.read-more:before{
+     .sprite(@s-simle-arrow-right);
+      position: absolute;
+      margin: 4px 0 0 -15px;
+      content: ''; 
+}
+.caret{
+   .sprite(@s-simple-arrow-down);
+}

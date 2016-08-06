@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Program Name</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+  </head>
+  <body>
+    <div class="global-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="logo-wrap">
+                        <img src="images/lamp.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="wishlist">
+                <h1>Wishes :</h1>
+                <div id="addwish-mount"></div>
+                <div id="whishlist-mount"></div>
+                <div id="stats-mount"></div>
+
+                <script type="text/x-handlebars-template" id="form-tpl">
+                    <div class="form-group">
+                        <label class="control-label" for="input"></label>
+
+                        <div class="input-group">
+                            <span class="input-group-addon">$</span>
+                            <input type="text" id="input" class="form-control">
+                            <span class="input-group-addon">$</span>
+                        </div><!--/input-group -->
+                    </div><!--/form-group -->
+                    <div class="btn-container">
+                        <button type="button" id="add" class="btn btn-success btn-default">
+                            <span class="glyphicon glyphicon-plus">Добавить</span>
+                        </button>
+                        <button type="button" id="clear" class="btn btn-warning btn-default">
+                            <span class="glyphicon glyphicon-trash">Очистить</span>
+                        </button>
+                    </div>
+
+
+                </script>
+
+                <script type="text/x-handlebars-template" id="stats-template">
+                    <div class="menu">
+                        <div class="col-xs-3">
+                            <span id="todo-count">
+                                <%= remaining %> <%= remaining === 1 ? 'item' : 'items' %> left
+                            </span>
+                        </div>
+                        <div class="col-xs-6"></div>
+                        <div class="col-xs-3">
+                            <button id="clear-completed">Clear completed</button>
+                        </div>
+                    </div><!-- /menu -->
+                </script>
+
+                <script type="text/x-handlebars-template" id="wish-tpl">
+                    <div class="view col-xs-12">
+                        <div class="col-xs-9">
+                            <input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
+                            <label> <%= title %></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <button type="button" class="btn del-btn">
+                                X
+                            </button>
+                        </div>
+                    </div>
+                </script>
+            </div><!--/wihslist -->
+        </div>
+    </div><!--/global-wrap -->
+    <!--Placed at the end of the document so the pages load faster-->
+    <script type="text/javascript" src="js/vendor/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="js/vendor/underscore.js"></script>
+    <script type="text/javascript" src="js/vendor/backbone.js"></script>
+    <script type="text/javascript" src="js/vendor/backbone.localStorage.js"></script>
+    <script type="text/javascript" src="js/models.js"></script>
+    <script type="text/javascript" src="js/collections.js"></script>
+    <script type="text/javascript" src="js/views.js"></script>
+
+  </body>
+</html>

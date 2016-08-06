@@ -1,0 +1,56 @@
+.tabs
+	background-position: 0 0;
+	background-repeat: repeat;
+	background-image: url(../images/slider-pattern-bg.jpg);
+.tab
+	make-xs-column(12)
+	&__item
+		make-xs-column(12)
+		make-sm-column(12)
+		make-md-column(6)
+	&__name
+		color #fff
+	&__post
+		color #8cc739
+	&__description
+		color #949494
+	&__social
+		li
+			display inline-block
+			a
+				display inline-block
+				color #8cc739
+	&__skill
+		make-xs-column(12)
+		h4
+			color #fafafa
+			float right
+			font-size 14px
+		&__outer
+			background #6b6b6b
+			make-xs-column(12)
+			border-radius 5px
+/*
+# ===============================================
+#	Proress Bars   
+# ===============================================
+*/
+.goalProgress {
+	padding: 5px;
+}
+div.progressBar {
+	background: #8cc739;
+	color: #fff;
+	font-size: 1.5em;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+	letter-spacing: -1px;
+	font-weight: 700;
+	padding: 10px;
+	display: block;
+	overflow: hidden;
+	width: 20px;
+}
+span.goalAmount {
+	display: none;
+	text-indent: -9999px;
+}

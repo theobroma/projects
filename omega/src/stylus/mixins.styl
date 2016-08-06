@@ -1,0 +1,34 @@
+/*--------------------------------------------------*\
+	# Mixins for sprites
+\*--------------------------------------------------*/
+
+spriteWidth($sprite)
+	width $sprite[4]
+
+spriteHeight($sprite)
+	height $sprite[5]
+
+spritePosition($sprite)
+	background-position $sprite[2] $sprite[3]
+
+spriteImage($sprite)
+	background-image url($sprite[8])
+
+sprite($sprite)
+	if !match('hover', selector()) && !match('active', selector())
+		spriteImage($sprite)
+	spritePosition($sprite)
+	spriteWidth($sprite)
+	spriteHeight($sprite)
+/*
+# ===============================================
+#   My mixins
+# ===============================================
+*/
+circle($width, $color)
+	width: $width
+	height: $width
+	background: $color
+	-webkit-border-radius: ($width / 2)
+	-moz-border-radius: ($width / 2)
+	border-radius: ($width / 2)

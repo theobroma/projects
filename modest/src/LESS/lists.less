@@ -1,0 +1,118 @@
+ /* Navbar Bootstrap override */
+ .navbar-nav {
+    > li > a {
+      	color: @navbar-default-link-color;
+		border:@my-navbar-li-border-size solid transparent;
+		border-radius:4px 4px 4px 4px;
+		text-transform: uppercase;
+		padding: 3px 10px;
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-hover-color;
+        background-color: @navbar-default-link-hover-bg;
+        border-color: #a4aead;        		
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-active-color;
+        background-color: @navbar-default-link-active-bg;
+        border-color: @my-teal;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-disabled-color;
+        background-color: @navbar-default-link-disabled-bg;
+      }
+    }
+  }
+
+
+.navbar-nav > li{
+  margin:0 6px;
+}
+.caret{
+	border: 0;
+}
+.navbar-brand{
+	&:hover{
+		opacity:0.7;
+	}	
+}
+/* Modest-list */
+.modest-list{
+    counter-reset: withnull; /*объявляем счетчик*/
+    padding:0;
+    list-style:none;
+ li {
+    position:relative;
+    margin:0px 0px 0px 40px;
+    padding:1px 2px;
+}
+ 
+ li:before {
+    content: "0" counter(withnull, decimal); /*запускаем счетчик, устанавливая перед всеми номерами "0" */
+    counter-increment: withnull;
+    position:absolute;
+    top:13px;
+    left:-66px;
+    width:50px;
+    height: 50px;
+    line-height: 50px;
+    color:#fff;
+    font-weight:bold;
+    text-align:center;
+    font-size: 14px;
+    background: #23b7a4;
+    }
+}
+
+/* Modest-social */
+.modest-social{
+  margin-top: 70px;
+	ul{
+    list-style-type:none;
+    padding:0;
+  }
+	li{
+		float: left;
+		margin-right:1px;
+		margin-top: 4px;
+    text-align: center;
+    line-height: 60px;
+		a{
+      font-size: 25px;
+      background-color: #c8cdd0;
+			display: inline-block;
+      width: 60px;
+      height: 60px;
+      &:hover{
+        opacity:0.75;
+      }
+		}
+	}
+}
+/* Footer-social */
+.footer-social{
+  font-size: 20px;
+  ul{
+    list-style-type:none;
+  }
+  li{
+    float: left;
+    margin-left:18px;
+    margin-top: 4px;
+    text-align: center;
+    a{
+      display: inline-block;
+     &:hover{
+        opacity:0.75;
+      }
+    }
+  }
+}

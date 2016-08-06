@@ -1,0 +1,34 @@
+@import '_sprite.styl'
+@import 'mixins'
+/*--------------------------------------------------*\
+		# Sprites
+\*--------------------------------------------------*/
+//carousel
+.circled-left
+	sprite($s-circled-left)
+	left -123px
+.circled-right
+	sprite($s-circled-right)
+	right -123px
+	left auto
+//portfolio
+.portfolio
+	&__comments
+		sprite($s-chat)
+	&__likes
+		sprite($s-heart-like)
+	&__load-more
+		make-xs-column(12)
+		margin-top 27px
+		a
+			position relative
+			z-index 2
+			&:hover
+				text-decoration none
+				color #fff
+			i
+				display inline-block
+				sprite($s-load-arrow)
+				position absolute
+				top 32px
+				left 27px

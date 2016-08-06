@@ -1,0 +1,51 @@
+
+.control-group{
+
+}
+label{
+  font-weight: 400;
+  padding-top: 14px !important;
+  margin-bottom: 9px !important;
+}
+input[type="text"],
+input[type="email"]{
+    height: 40px;
+}
+textarea{
+    height: 160px;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+  border: 1px solid #b4bac5;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus{
+  border: 1px solid #2aacc8;
+  outline: none;
+}
+.submit-btn{
+   display: block;
+   background-color: #fff;
+   border: transparent;
+}
+.submit-btn-controls{
+  margin-top: 16px;
+}
+
+
+@media (min-width: 1000px) {
+    input[type="text"],
+    input[type="email"],
+    textarea{
+    width: 480px;
+  }
+}
+@media (min-width: 1px) and (max-width: 999px) {
+    input[type="text"],
+    input[type="email"],
+    textarea{
+       width:100%;
+    }
+}

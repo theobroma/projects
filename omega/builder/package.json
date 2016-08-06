@@ -1,0 +1,26 @@
+{
+  "name": "GulpOnly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.7.1",
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jade": "^1.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-stylus": "^2.0.2",
+    "gulp-watch": "^4.2.4",
+    "gulp.spritesmith": "^3.7.0",
+    "imagemin-jpegtran": "^4.1.0",
+    "imagemin-pngquant": "^4.1.0"
+  }
+}

@@ -1,0 +1,61 @@
+/*--------------------------------------------------*\
+		# Buttons
+\*--------------------------------------------------*/
+//scale
+.scale
+	transition transform 0.1s ease-in
+	&:hover
+		transform scale(1.1) 
+.btn-purchaise
+	@extend .btn
+	@extend .scale
+	border-radius 6px
+	border 1px solid #a4ce20
+	background #a4ce20
+	box-shadow rgba(111,114,0,0.5) 0 3px 0
+	font-size 18px
+	padding 7px 25px 11px 25px
+	&:hover
+		color #fff
+.btn-follow
+	@extend .btn
+	@extend .scale
+	border-radius 6px
+	border 1px solid #00bd9d
+	background #00bd9d
+	box-shadow rgba(0,148,124,0.5) 0 3px 0
+	font-size 18px
+	padding 7px 38px 11px 38px
+	&:hover
+		color #fff
+.btn-teal
+	@extend .btn
+	border-radius 0
+	border 1px solid #00bd9d
+	background #00bd9d
+	box-shadow rgba(0,148,124,0.5) 0 3px 0
+/*--------------------------------------------------*\
+		# Forms 
+\*--------------------------------------------------*/
+.contact-us
+	&__form
+		make-xs-column(9)
+		input[name="name"]
+			margin-right 17px
+		input[name="name"],
+		input[name="email"]
+			width 347px
+			float left
+		textarea[name="message"]
+			make-xs-column(12)
+		input,
+		textarea
+			background-color #1c1e22
+			border none
+			padding 5px
+			margin-bottom 15px
+	&__aside
+		make-xs-column(3)
+/*--------------------------------------------------*\
+		#Tables 
+\*--------------------------------------------------*/

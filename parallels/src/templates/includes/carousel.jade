@@ -1,0 +1,28 @@
+.container-fixed
+	.Carousel__in
+		#myCarousel.carousel
+			//Carousel indicators
+			ol.carousel-indicators
+					li(data-target="#myCarousel" data-slide-to="0" class="active")
+					li(data-target="#myCarousel" data-slide-to="1" class="active")
+					li(data-target="#myCarousel" data-slide-to="2" class="active")
+			//Carousel items
+			.carousel-inner
+				.item.active
+					img(src="images/design/slide1.jpg" alt="First slide")
+					.carousel-caption
+						h2 Welcome to Parallels(First)
+						p Clean Responsive Parallax Theme
+				.item
+					img(src="http://placehold.it/940x590" alt="Second slide")
+					.carousel-caption
+						h2 Welcome to Parallels(Second)
+						p Clean Responsive Parallax Theme
+				.item
+					img(src="http://placehold.it/940x590" alt="Third slide")
+					.carousel-caption
+						h2 Welcome to Parallels(Third)
+						p Clean Responsive Parallax Theme
+			// Carousel nav
+			a(class="carousel-control circled-left" href="#myCarousel" data-slide="prev")
+			a(class="carousel-control circled-right" href="#myCarousel" data-slide="next")

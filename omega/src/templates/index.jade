@@ -1,0 +1,253 @@
+extends ./includes/layout
+
+block content
+	.main
+		#wayp-2.about.tracked
+			.container
+				.in
+					.about__left
+						.title-bl
+							h2 We are Omega!
+						.description
+							span.mygreen We build breathtaking apps & we never stop learning. That’s what we do.
+						p Lorem ipsum dolor sit amet, consectetur adipiscing. Quisque congue dui et justo vulputate, eget vehicula lorem fringilla. Vestibulum vitae edor dolor euimod, scelerisque emenim sed, consectetur nibh.
+					.about__right
+						img(src="images/tablet.png" class="img-responsive", alt="tablet")
+		#wayp-3.whatwedo.tracked
+			.container
+				.in
+					.title-bl
+						h2 What we do
+					.description  We're an energetic and determined team driven by results, committed to helping your business succeed.
+					.whatwedo__item
+						.whatwedo__card
+							.front
+								a(href="#" class="whatwedo__link-1")
+							.back
+								a(href="#" class="whatwedo__link-1-hover")
+						h3 Unique DESIGN
+						p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
+					.whatwedo__item
+						.whatwedo__card
+							.front
+								a(href="#" class="whatwedo__link-2")
+							.back
+								a(href="#" class="whatwedo__link-2-hover")
+						h3 FRIENDLY SUPPORT
+						p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
+					.whatwedo__item
+						.whatwedo__card
+							.front
+								a(href="#" class="whatwedo__link-3")
+							.back
+								a(href="#" class="whatwedo__link-3-hover")
+						h3 CREATIVE SOLUTION
+						p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
+					.whatwedo__item
+						.whatwedo__card
+							.front
+								a(href="#" class="whatwedo__link-4")
+							.back
+								a(href="#" class="whatwedo__link-4-hover")
+						h3 OUT OF THE BOX IDEAS
+						p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
+		#wayp-4.parallax.tracked
+			.container
+				.in
+					.parallax__item.animated.delay-05s
+						img(src="images/heart.png", alt="heart")
+						h3 54 100
+						p Lovely clients
+					.parallax__item.animated.delay-10s
+						img(src="images/trumpet.png", alt="trumpet")
+						h3 185 200
+						p Listened to music
+					.parallax__item.animated.delay-15s
+						img(src="images/cup.png", alt="cup")
+						h3 367
+						p Awards & Recognition
+					.parallax__item.animated.delay-20s
+						img(src="images/dl-arrow.png", alt="dl-arrow")
+						h3 251,060
+						p Downloads
+		#wayp-5.Team.tracked
+			include slider
+		#wayp-6.portfolio.tracked
+			.container-lg
+				.container
+					.in
+						.title-bl
+							h2 What we’ve done
+						.description We combine intelligent thinking with stimulating design to keep your brand engaging and help challenging brands find their clarity.
+						.portfolio__filter
+							ul
+								li
+									a(href="#" class="active") All
+								li
+									a(href="#") Logo Design
+								li
+									a(href="#") Mobile Development
+								li
+									a(href="#") Painting
+								li
+									a(href="#") Design-3D
+				.portfolio__content
+					.portfolio__item
+						img(src="images/pie-chart.jpg", alt="pie-chart")
+						.portfolio__title Awesome Pie Chart
+						.portfolio__category UI Design
+					.portfolio__item
+						img(src="images/secretlaura.jpg", alt="secretlaura")
+						.portfolio__title Awesome Pie Chart
+						.portfolio__category UI Design
+					.portfolio__item
+						img(src="images/tilt-logo.jpg", alt="tilt-logo")
+						.portfolio__title Awesome Pie Chart
+						.portfolio__category UI Design
+					.portfolio__item
+						img(src="images/sportsman.jpg", alt="sportsman")
+						.portfolio__title Awesome Pie Chart
+						.portfolio__category UI Design
+					.portfolio__item
+						img(src="images/ahhh-monster.jpg", alt="ahhh-monster")
+						.portfolio__title Awesome Pie Chart
+						.portfolio__category UI Design
+					.portfolio__item
+						img(src="images/bag.jpg", alt="bag")
+						.portfolio__title Awesome Pie Chart
+						.portfolio__category UI Design
+					.portfolio__item
+						img(src="images/hytek.jpg", alt="hytek")
+						.portfolio__title Awesome Pie Chart
+						.portfolio__category UI Design
+					.portfolio__item
+						img(src="images/dolphin.jpg", alt="dolphin")
+						.portfolio__title Awesome Pie Chart
+						.portfolio__category UI Design
+					.portfolio__item
+						img(src="images/unbeanannt.jpg", alt="unbeanannt")
+						.portfolio__title Awesome Pie Chart
+						.portfolio__category UI Design
+					.portfolio__item
+						img(src="images/kidsquest.jpg", alt="kidsquest")
+						.portfolio__title Awesome Pie Chart
+						.portfolio__category UI Design
+		#wayp-7.pricing.tracked
+			.container
+				.in
+					.title-bl
+						h2 Pricing tables
+					.description
+						p We have flexible pricing options that caters your need.
+						p Below is our lightweight pricing table.
+					.pricing__item
+						.pricing__name Basic
+						.pricing__quantity
+							span.pricing__quantity__dollar $
+							span 299
+							span.pricing__quantity__month / month
+						.pricing__specs
+							ul
+								li Web Design
+								li Creative Retouching
+								li CG Prouction
+								li Tech Support
+								li Branding
+						.pricing__signup
+							button.btn-signup Signup Now
+					.pricing__item
+						.pricing__name Standard
+						.pricing__quantity
+							span.pricing__quantity__dollar $
+							span 399
+							span.pricing__quantity__month / month
+						.pricing__specs
+							ul
+								li Web Design
+								li Creative Retouching
+								li CG Prouction
+								li Tech Support
+								li Branding
+						.pricing__signup
+							button.btn-signup Signup Now
+					.pricing__item.mygreen
+						.pricing__name Premium
+						.pricing__quantity
+							span.pricing__quantity__dollar $
+							span 499
+							span.pricing__quantity__month / month
+						.pricing__specs
+							ul
+								li Web Design
+								li Creative Retouching
+								li CG Prouction
+								li Tech Support
+								li Branding
+						.pricing__signup
+							button.btn-signup.mygreen-bg Signup Now
+					.pricing__item
+						.pricing__name Professional
+						.pricing__quantity
+							span.pricing__quantity__dollar $
+							span 599
+							span.pricing__quantity__month / month
+						.pricing__specs
+							ul
+								li Web Design
+								li Creative Retouching
+								li CG Prouction
+								li Tech Support
+								li Branding
+						.pricing__signup
+							button.btn-signup Signup Now
+		#wayp-8.clients.tracked
+			.container
+				.in
+					.title-bl
+						h2 Our clients
+					.description Over 5000+ clients in less than 1.5 years including Fortune 500 companies. Some of them are listed below.
+					.clients__list
+						ul
+							li
+								a(href="" class="clients__list--1") graphicriver
+							li
+								a(href="" class="clients__list--2") themeforest
+							li
+								a(href="" class="clients__list--3") audiojungle
+							li
+								a(href="" class="clients__list--4") codecanyon
+							li
+								a(href="" class="clients__list--5") activeden
+		#wayp-9.contact.tracked
+			.container
+				.in
+					.title-bl
+						h2 Contact us
+					.description Over 5000+ clients in less than 1.5 years including Fortune 500 companies. Some of them are listed below.
+					.contact__form
+						form
+							.row
+								.contact__left
+									.control-group
+										label.control-label(for='nameinput')
+										.controls
+											input#nameinput.input-xlarge(name='name', type='text', placeholder='Enter your name')
+									.control-group
+										label.control-label(for='emailinput')
+										.controls
+											input#emailinput.input-xlarge(name='email', type='text', placeholder='Enter your email')
+									.control-group
+										label.control-label(for='subjectinput')
+										.controls
+											input#subjectinput.input-xlarge(name='subject', type='text', placeholder='Enter your subject')
+								.contact__right
+									.control-group
+										label.control-label(for='messagetextarea')
+										.controls
+											textarea#messagetextarea(name='message' rows="8")
+							.row
+								.contact__bottom
+									.control-group
+											label.control-label(for='btn-contact')
+											.controls
+												button#btn-contact.btn-contact(name='btn-contact') Submit

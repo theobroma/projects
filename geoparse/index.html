@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>My Parse App</title>
+      <meta name="description" content="My Parse App">
+      <meta name="viewport" content="width=device-width">
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/reset.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <script type="text/javascript" src="https://maps.google.com/maps/api/js"></script>
+       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+
+      <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="top-nav col-xs-12">
+            <div id="current-user">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">
+                <div class="col-xs-12">
+                    <nav class="well well-lg">
+                        <h3>Навигация</h3>
+                        <ul>
+                            <li>
+                                <a href="addCity.html">Добавить еще города в БД</a>
+                                <!-- <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> -->
+                            </li>
+                            <li>
+                                <a href="index.html">Карта ближайших точек</a>
+                            </li>
+                            <li>
+                                <a href="registration.html">Регистрация</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-xs-9">
+                <h2>Кликни по карта для определения ближайшей точки</h2>
+                <div id="map"></div>
+            </div>
+        </div>
+        <div class="row">
+            <table id="table-near" class="table table-striped">
+                <caption>Ближайшие точки в зависимости от близости</caption>
+                <thead>
+                  <tr>
+                    <th>CityName</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>CreatedAt</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="text/javascript" src ="js/geocoder.js"></script>
+    <script type="text/javascript" src ="js/queryParse.js"></script>
+    <script type="text/javascript" src ="js/geoQuery.js"></script>
+    <script type="text/javascript" src ="js/registration.js"></script>
+  </body>
+</html>

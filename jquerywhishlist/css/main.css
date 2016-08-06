@@ -1,0 +1,62 @@
+.logo-wrap img{
+    display: block;
+    width: 400px;
+    height: 300px;
+}
+
+.btn-container {
+    padding: 10px 10px;
+}
+.hl{
+    color: red;
+    background-color:yellow;
+}
+.list-item {
+    color:green;
+}
+#wishlist li.completed label {
+    color: #d9d9d9;
+    text-decoration: line-through;
+}
+#wishlist ul {
+    list-style-type: none;
+}
+#wishlist ul li {
+    padding: 20px 5px 20px 5px;
+}
+/* Filters */
+.todo-count {
+    float: left;
+    text-align: left;
+}
+
+.todo-count strong {
+    font-weight: 300;
+}
+.menu {
+    padding: 20px 5px 20px 5px;
+}
+.clear-completed,
+html .clear-completed:active {
+    float: right;
+    position: relative;
+    line-height: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.clear-completed:hover {
+    text-decoration: underline;
+}
+/* Редактирование интпута */
+#wishlist .edit {
+    display: none;
+}
+#wishlist li.editing .edit {
+    display: block;
+    border: 1px solid red;
+    width: 506px;
+    padding: 13px 17px 12px 17px;
+    margin: 0 0 0 43px;
+}

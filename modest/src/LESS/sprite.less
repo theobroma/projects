@@ -1,0 +1,86 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+@s-clock-x: 0px;
+@s-clock-y: 0px;
+@s-clock-offset-x: 0px;
+@s-clock-offset-y: 0px;
+@s-clock-width: 48px;
+@s-clock-height: 48px;
+@s-clock-total-width: 100px;
+@s-clock-total-height: 100px;
+@s-clock-image: '../images/design/sprite.png';
+@s-clock: 0px 0px 0px 0px 48px 48px 100px 100px '../images/design/sprite.png';
+@s-cogs-x: 52px;
+@s-cogs-y: 0px;
+@s-cogs-offset-x: -52px;
+@s-cogs-offset-y: 0px;
+@s-cogs-width: 48px;
+@s-cogs-height: 48px;
+@s-cogs-total-width: 100px;
+@s-cogs-total-height: 100px;
+@s-cogs-image: '../images/design/sprite.png';
+@s-cogs: 52px 0px -52px 0px 48px 48px 100px 100px '../images/design/sprite.png';
+@s-mobile-x: 0px;
+@s-mobile-y: 52px;
+@s-mobile-offset-x: 0px;
+@s-mobile-offset-y: -52px;
+@s-mobile-width: 30px;
+@s-mobile-height: 48px;
+@s-mobile-total-width: 100px;
+@s-mobile-total-height: 100px;
+@s-mobile-image: '../images/design/sprite.png';
+@s-mobile: 0px 52px 0px -52px 30px 48px 100px 100px '../images/design/sprite.png';
+@s-pencil-x: 34px;
+@s-pencil-y: 52px;
+@s-pencil-offset-x: -34px;
+@s-pencil-offset-y: -52px;
+@s-pencil-width: 48px;
+@s-pencil-height: 48px;
+@s-pencil-total-width: 100px;
+@s-pencil-total-height: 100px;
+@s-pencil-image: '../images/design/sprite.png';
+@s-pencil: 34px 52px -34px -52px 48px 48px 100px 100px '../images/design/sprite.png';
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+*/
+.sprite-width(@sprite) {
+  width: ~`"@{sprite}".split(', ')[4]`;
+}
+
+.sprite-height(@sprite) {
+  height: ~`"@{sprite}".split(', ')[5]`;
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: ~`"@{sprite}".split(', ')[2]`;
+  @sprite-offset-y: ~`"@{sprite}".split(', ')[3]`;
+  background-position: @sprite-offset-x  @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: ~`"@{sprite}".split(', ')[8].slice(1, -2)`;
+  background-image: url(@sprite-image);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}

@@ -1,0 +1,12 @@
+{
+  "name": "default-gulp-settings",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Siryj Olexandr",
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-less": "^1.3.1",
+    "gulp-plumber": "^0.6.5",
+    "gulp-watch": "^0.6.8"
+  }
+}

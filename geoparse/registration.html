@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>My Parse App</title>
+      <meta name="description" content="My Parse App">
+      <meta name="viewport" content="width=device-width">
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/reset.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <script type="text/javascript" src="https://maps.google.com/maps/api/js"></script>
+       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+
+      <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="top-nav col-xs-12">
+            <div id="current-user">
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">
+                <div class="col-xs-12">
+                    <nav class="well well-lg">
+                        <h3>Навигация</h3>
+                        <ul>
+                            <li>
+                                <a href="addCity.html">Добавить еще города в БД</a>
+                                <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                            </li>
+                            <li>
+                                <a href="index.html">Карта ближайших точек</a>
+                            </li>
+                            <li>
+                                <a href="registration.html">Регистрация</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <h6>Sign up</h6>
+                <form id="signup" class="form-horizontal">
+                  <div class="form-group">
+                    <label for="inputUserName" class="col-sm-2 control-label">UserName</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputUserName" placeholder="UserName">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassWord" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="inputPassWord" placeholder=" Enter PassWord">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputConfirmPassWord" class="col-sm-2 control-label">Confirm</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="inputConfirmPassWord" placeholder="Confirm PassWord">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputEmail" placeholder="Enter Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default">Sign in</button>
+                    </div>
+                  </div>
+                </form>
+            </div><!-- End of signup -->
+            <div class="col-xs-5">
+                <h6>Log in</h6>
+                <form id="login" class="form-horizontal">
+                  <div class="form-group">
+                    <label for="loginUserName" class="col-sm-2 control-label">UserName</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="loginUserName" placeholder="UserName">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="loginPassWord" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="loginPassWord" placeholder=" Enter PassWord">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Remember me
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default">Log in</button>
+                    </div>
+                  </div>
+                </form>
+            </div><!-- End of login -->
+        </div>
+    <script type="text/javascript" src ="js/geocoder.js"></script>
+    <script type="text/javascript" src ="js/queryParse.js"></script>
+    <script type="text/javascript" src ="js/geoQuery.js"></script>
+    <script type="text/javascript" src ="js/registration.js"></script>
+  </body>
+</html>

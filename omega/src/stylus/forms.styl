@@ -1,0 +1,100 @@
+/*--------------------------------------------------*\
+		# Buttons
+\*--------------------------------------------------*/
+//scale
+.scale
+	transition transform 0.1s ease-in
+	&:hover
+		transform scale(1.1) 
+.btn-purchaise
+	@extend .btn
+	@extend .scale
+	border-radius 6px
+	border 1px solid #a4ce20
+	background #a4ce20
+	box-shadow rgba(111,114,0,0.5) 0 3px 0
+	font-size 18px
+	padding 7px 25px 7px 25px
+	&:hover
+		color #fff
+.btn-follow
+	@extend .btn
+	@extend .scale
+	border-radius 6px
+	border 1px solid #00bd9d
+	background #00bd9d
+	box-shadow rgba(0,148,124,0.5) 0 3px 0
+	font-size 18px
+	padding 7px 38px 7px 38px
+	&:hover
+		color #fff
+.btn-teal
+	@extend .btn
+	border-radius 0
+	border 1px solid #00bd9d
+	background #00bd9d
+	box-shadow rgba(0,148,124,0.5) 0 3px 0
+.btn-signup
+	@extend .btn
+	@extend .scale
+	color #fff
+	border-radius 6px
+	border 1px solid tranparent
+	background #333333
+	/*box-shadow rgba(111,114,0,0.5) 0 3px 0*/
+	font 16px/1.5 Lato,serif
+	padding 4px 30px 4px 30px
+	&:hover
+		color #fff
+.btn-contact
+	@extend .btn
+	border-radius 6px
+	border 1px solid #a4ce20
+	background #a4ce20
+	box-shadow rgba(111,114,0,0.5) 0 3px 0
+	font-size 18px
+	padding 7px 25px 7px 25px
+	&:hover
+		color #fff
+.btn-learnmore
+	@extend .btn
+	border-radius 6px
+	border 1px solid #a4ce20
+	background #a4ce20
+	box-shadow rgba(111,114,0,0.5) 0 3px 0
+	font-size 18px
+	padding 7px 25px 7px 25px
+	&:hover
+		color #fff
+/*--------------------------------------------------*\
+		# Forms 
+\*--------------------------------------------------*/
+.contact
+	&__left
+		make-md-column(3)
+		make-xs-column(12)
+	&__right
+		make-md-column(9)
+		make-xs-column(12)
+	&__bottom
+		make-xs-column(12)
+		+below(2)
+			text-align center
+/*	input[name="name"]
+		margin-right 17px
+	input[name="name"],
+	input[name="email"],
+	input[name="subject"]
+		
+	textarea[name="message"]*/
+	textarea
+	input,
+	textarea
+		width 100%
+		background-color #fff
+		border 1px solid #e3e3e3
+		padding 5px
+		margin-bottom 15px
+/*--------------------------------------------------*\
+		#Tables 
+\*--------------------------------------------------*/

@@ -1,0 +1,184 @@
+extends ./includes/layout
+		
+block content
+	// Begin of Carousel
+	.carousel__wrapper
+		include ./includes/carousel
+	// End of Carousel
+	// Begin of services
+	.b-dark-blue.services
+		.container-fixed
+			.in
+				h2 Our Services
+				.services__item
+					.services__circle
+						i
+							img(src="images/design/browser.png", alt="browser")
+					h3 Web Design
+					p
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu varius dui. Nunc id 
+						scelerisque ligula.
+				.services__item
+					.services__circle
+						i
+							img(src="images/design/iphone.png", alt="iphone")
+					h3 UIDesign
+					p
+						Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+				.services__item
+					.services__circle
+						i
+							img(src="images/design/trash.png", alt="trash")
+					h3 Prototype	
+					p 
+						Sed vestibulum mi quis est lacinia tempor. Praesent vitae commodo tellus. Cras eu est sem.	
+				.services__item
+					.services__circle
+						i
+							img(src="images/design/camera.png", alt="camera")
+					h3 Photography
+					p
+						Donec tempus lacinia purus ut tincidunt. Nunc vel feugiat leo. Nunc iaculis hendrerit gravida.
+	// End of services
+	// Begin of b-brown
+	.b-brown.question
+		.container-fixed
+			.in
+				h3 Do you like this clean theme?
+				p
+					ul
+						li
+							a(href="#" class="btn-purchaise") Purchaise
+						li
+							a(href="#" class="btn-follow") Follow
+	// End of b-brown
+	// Begin of portfolio
+	.b-dark-blue.portfolio
+		.container-fixed
+			.in
+				include ./includes/portfolio
+	// End of portfolio
+	.b-brown.pricing-table
+		.container-fixed
+			.in
+				h3 Pricing table
+				p Clean beautiful flat table
+	// End of b-brown
+	// Begin of Our-price
+	.b-dark-blue.Our-price
+		.container-fixed
+			.in
+				include ./includes/our-price
+	// End of Our-price
+	.b-brown.our-team
+		.container-fixed
+			.in
+				h3 Our team
+				p We a professional and progressive team
+	// End of b-brown
+	// Begin of About-us
+	.b-dark-blue.about-us
+		.container-fixed
+			.in
+				h2 About Us
+				.about-us__item
+					figure
+						img(src="images/design/mark.jpg", alt="mark")
+						figcaption
+							p
+								span.about-us__name Mark Cream
+							p
+								span.about-us__position Developer
+							p.
+								Curabitur congue libero mi, et lacinia sem blandit sit amet. Donec eu mi non magna rhoncus bibendum et eu dui. Nunc iaculis placerat sapien vel imperdiet. 
+				.about-us__item
+					figure
+						img(src="images/design/antonio.jpg", alt="antonio")
+						figcaption
+							p
+								span.about-us__name Antonio Paramo
+							p
+								span.about-us__position Fire Effects
+							p.
+								Etiam pulvinar libero et scelerisque cursus. Sed eu nisl congue, gravida urna imperdiet, laoreet dolor. Morbi adipiscing neque erat, tincidunt 
+								porttitor est vestibulum ac. 
+				.about-us__item
+					figure
+						img(src="images/design/mario.jpg", alt="mario")
+						figcaption
+							p
+								span.about-us__name Mario Ballote
+							p
+								span.about-us__position Big Boss
+							p.
+								Donec at pulvinar dolor, et lobortis est. Phasellus nibh nisi, blandit non velit sit amet, pulvinar vehicula nulla.
+				.about-us__item
+					figure
+						img(src="images/design/ben.jpg", alt="ben")
+						figcaption
+							p
+								span.about-us__name Ben Bugatton
+							p
+								span.about-us__position Designer
+							p.
+								Mauris dignissim felis quis justo malesuada gravida. Sed quis neque condimentum, luctus augue in, dapibus sapien.
+				.about-us__skills
+					h3.about-us__skills__title Our skills
+					ul
+						li
+							img(src="images/design/wed-design-circle.png", alt="wed-design-circle")
+						li
+							img(src="images/design/creative-circle.png", alt="creative-circle")
+						li
+							img(src="images/design/uidesign-circle.png", alt="uidesign-circle")
+						li
+							img(src="images/design/prototype-circle.png", alt="prototype-circle")
+						li
+							img(src="images/design/photography-circle.png", alt="photography-circle")
+	// End of About-us
+	.b-brown.over-6000
+		.container-fixed
+			.in
+				h3 You looked OVER 6000 px
+				p.
+					That’s Great!
+	// End of b-brown
+	// Begin of contact-us
+	.b-dark-blue.contact-us
+		.container-fixed
+			.in
+				include ./includes/contact-us
+	// End of contact-us
+	.b-brown.social
+		.container-fixed
+			.in
+				h3 Connect with us
+				p.
+					Follow Us On Social Networks
+				ul.social__list
+					li
+						a(href="#",)
+							i.fa.fa-github
+					li
+						a(href="#",)
+							i.fa.fa-flickr
+					li
+						a(href="#",)
+							i.fa.fa-vimeo-square
+					li
+						a(href="#",)
+							i.fa.fa-twitter
+					li
+						a(href="#",)
+							i.fa.fa-facebook
+					li
+						a(href="#",)
+							i.fa.fa-google-plus
+					li
+						a(href="#",)
+							i.fa.fa-pinterest
+					li
+						a(href="#",)
+							i.fa.fa-tumblr
+	// End of b-brown
+	
