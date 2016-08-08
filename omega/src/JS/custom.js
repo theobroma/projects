@@ -7,7 +7,7 @@ $(document).ready(gwPadding);                                 //  Вызов ф�
 $(window).resize(gwPadding);                                  //  Вызов функции при изменении ширины окна
 /*
 # ===============================================
-#   
+#
 # ===============================================
 */
 
@@ -31,17 +31,6 @@ $('.tracked').waypoint(function() {
 });
 /*
 # ===============================================
-#    Waypoint & animate.css
-# ===============================================
-*/
-/*$('.parallax__item').waypoint(function() {
-	$(this).removeClass('hidden');
-	$(this).addClass('fadeInUp');
-},{
-	offset: '10%'
-});*/
-/*
-# ===============================================
 #   Sticky navbar
 # ===============================================
 */
@@ -51,16 +40,16 @@ $('.tracked').waypoint(function() {
 			y_pos = $navbar.offset().top,
 			height = $navbar.height();
 
-	$(document).scroll(function(){    
+	$(document).scroll(function(){
 		var scrollTop = $(this).scrollTop();
 
 		if (scrollTop > y_pos + height){
 			$navbar.addClass("navbar-fixed-top").animate({ top: 0 });
-		} else if (scrollTop <= y_pos){        
-			$navbar.removeClass("navbar-fixed-top").clearQueue().animate({ top: "-48px" }, 0);
+		} else if (scrollTop <= y_pos){
+			$navbar.removeClass("navbar-fixed-top").clearQueue().animate({}, 0);
 		}
 	});
-	
+
 })(jQuery, undefined);
 /*
 # ===============================================
@@ -103,7 +92,35 @@ $(document).ready(function(){
 });
 /*
 # ===============================================
-#  Progress Bars 
+#  CountUp
+# ===============================================
+*/
+var options = {
+  useEasing : true,
+  useGrouping : true,
+  separator : ' ',
+  decimal : '.',
+  prefix : '',
+  suffix : ''
+};
+var demo  = new CountUp("countUp1", 0, 3041, 0, 2.5, options);
+var demo2 = new CountUp("countUp2", 0, 185200, 0, 2.5, options);
+var demo3 = new CountUp("countUp3", 0, 367, 0, 2.5, options);
+var demo4 = new CountUp("countUp4", 0, 251060, 0, 2.5, options);
+
+$('.parallax__item').waypoint(function() {
+    demo.start();
+    demo2.start();
+    demo3.start();
+    demo4.start();
+},{
+    offset: '90%'
+});
+
+
+/*
+# ===============================================
+#  Progress Bars
 # ===============================================
 */
 /*Parameters*/

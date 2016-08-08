@@ -1,6 +1,8 @@
 @import 'variables'
 @import 'bootstrap/index'
 @import 'rupture/index'
+@import 'slick/slick'
+@import 'slick/slick-theme'
 @import '_sprite'
 @import 'mixins'
 @import 'helpers'
@@ -13,305 +15,336 @@ make-sm-column(12)
 make-md-column(5)
 make-row()
 */
-
 /*--------------------------------------------------*\
-		# Common
+        # Common
 \*--------------------------------------------------*/
 body
 html
-	height 100%
+    height 100%
 body
-	min-height 100%
-	background-color #fff
+    min-height 100%
+    background-color #fff
+    font-size 16px
 div
-	box-sizing border-box
+    box-sizing border-box
 h3
-	font-size 1.5em
+    font-size 1.5em
 h2
-	font-size 1.4em
-	font-weight bold
-	font-family Arimo
+    font-size 1.4em
+    font-weight bold
+    font-family Arimo
 a
-	color #000
-	&:hover
-		text-decoration none
+    color #000
+    &:hover
+        text-decoration none
 p
-	margin 0 0 4px	
+    margin 0 0 4px
 ul
-	padding 0 !important	
-// Fixed container
-/*.container
-	width: 1200px !important*/
+    padding 0 !important
 .global-wrap
-	min-height 100%
-	position relative
+    min-height 100%
+    position relative
 .mygreen
-	color #8cc739
+    color #8cc739
 .mygreen-bg
-	background-color #8cc739	
+    background-color #8cc739
 .title-bl
-	position relative
-	&:before
-		content: ""
-		display: block
-		width: 70px
-		height: 2px
-		background: #d3d3d3
-		position: absolute
-		top: 190%
-		left: 0px
-	margin 0 0 38px 0
+    position relative
+    &:before
+        content: ""
+        display: block
+        width: 70px
+        height: 2px
+        background: #d3d3d3
+        position: absolute
+        top: 190%
+        left: 0px
+    margin 0 0 38px 0
 .description
-	font  33px/1.5 Lato light,serif
-	color #666666
+    font  33px/1.5 Lato light,serif
+    color #666666
 .container-lg
-	margin 0 auto
-	+desktop()
-		width 1920px
+    margin 0 auto
+    padding-left 15px
+    padding-right 15px
+    +mobile()
+        /*background-color:red*/
+    +tablet()
+        width 750px
+       /* background-color:yellow*/
+    +above(3)
+        max-width 1920px
+        /*background-color:blue*/
 /*--------------------------------------------------*\
-		# General
+        # General
 \*--------------------------------------------------*/
 .jumbotron
-	background: url(../images/jumbotron.jpg) no-repeat center top
-	text-align center
-	color #fff
-	& .in
-		padding 300px 0 400px 0
+    background: url(../images/jumbotron.jpg) no-repeat center top
+    text-align center
+    color #fff
+    margin 0 0 0 0
+    padding 0 0 0 0
+    p
+        font-size 1.3125em
+        +below(2)
+            font-size 1.1em;
+        +below(1)
+            font-size 0.9em;
+    & .in
+        padding 300px 0 400px 0
+    h1
+        font-size 4em;
+        +below(2)
+            font-size 3em;
+        +below(1)
+            font-size 2em;
 .logo
-	background url(../images/symbol.png) no-repeat center
-	background-size 100% 100%
-	height 150px
-	width 150px
-	display inline-block
+    background url(../images/symbol.png) no-repeat center
+    background-size 100% 100%
+    height 150px
+    width 150px
+    display inline-block
 .navbar
-	font  bold 1.5em/1.5 Arimo,serif
-	&-brand
-		padding 12px 15px
+    font  bold 1.5em/1.5 Arimo,serif
+    margin 0 0 0 0
+    &-brand
+        padding 12px 15px
+    &-outer
+        background-color $mygreen
 .about
-	background-color #fee
-	& .in
-		make-row()
-		padding 100px 0 100px 0
-	&__left
-		make-xs-column(12)
-		make-sm-column(12)
-		make-md-column(7)
-	&__right
-		make-xs-column(12)
-		make-sm-column(12)
-		make-md-column(5)
+    background-color #fee
+    & .in
+        make-row()
+        padding 100px 0 100px 0
+    &__left
+        make-xs-column(12)
+        make-sm-column(12)
+        make-md-column(7)
+    &__right
+        make-xs-column(12)
+        make-sm-column(12)
+        make-md-column(5)
 .whatwedo
-	background-color #f2f2f2
-	& .in
-		make-row()
-		padding 90px 0 160px 0
-	h3
-		font-size 18px
-	a
-		display inline-block
-		height 94px
-		width 94px
-	&__card
-		display inline-block
-		height 94px
-		width 94px
-	&__item
-		make-xs-column(12)
-		make-sm-column(6)
-		make-md-column(3)
-		text-align center
-	&__link-1
-		background-image: url(../images/thumb-up.png)
-		&-hover
-			background-image: url(../images/thumb-up-hover.png)
-	&__link-2
-		background-image: url(../images/headphones.png)
-		&-hover
-			background-image: url(../images/headphones-hover.png)	
-	&__link-3
-		background-image: url(../images/star.png)
-		&-hover
-			background-image: url(../images/star-hover.png)	
-	&__link-4
-		background-image: url(../images/box.png)
-		&-hover
-			background-image: url(../images/box-hover.png)				
+    background-color #f2f2f2
+    & .in
+        make-row()
+        padding 90px 0 160px 0
+    h3
+        font-size 18px
+    a
+        display inline-block
+        height 94px
+        width 94px
+    &__card
+        display inline-block
+        height 94px
+        width 94px
+    &__item
+        make-xs-column(12)
+        make-sm-column(6)
+        make-md-column(3)
+        text-align center
+    &__link-1
+        background-image: url(../images/thumb-up.png)
+        &-hover
+            background-image: url(../images/thumb-up-hover.png)
+    &__link-2
+        background-image: url(../images/headphones.png)
+        &-hover
+            background-image: url(../images/headphones-hover.png)
+    &__link-3
+        background-image: url(../images/star.png)
+        &-hover
+            background-image: url(../images/star-hover.png)
+    &__link-4
+        background-image: url(../images/box.png)
+        &-hover
+            background-image: url(../images/box-hover.png)
 .parallax
-	background-color #0b0a0a
-	& .in
-		make-row()
-		+desktop()
-			padding 100px 0 100px 0
-	&__item
-		make-xs-column(12)
-		make-sm-column(6)
-		make-md-column(3)
-		text-align center
-		+below(2)
-			padding 100px 0 0 0
-		h3
-			font-size 45px
-			color #fff
-		p
-			color #666666
-			font-size 15px
+    background-color #0b0a0a
+    & .in
+        make-row()
+        +above(3)
+            padding 100px 0 100px 0
+    &__item
+        make-xs-column(12)
+        make-sm-column(6)
+        make-md-column(3)
+        text-align center
+        +below(2)
+            padding 100px 0 0 0
+        h3
+            font-size 45px
+            color #fff
+        p
+            color #666666
+            font-size 15px
 .portfolio
-	font bold 20px/1.5 Lato light,serif
-	& .in
-		make-row()
-		padding 100px 0 100px 0
-	&__filter
-		make-row()
-		text-align center
-		ul
-			li
-				display inline-block
-				a
-					display inline-block
-					padding 7px 25px 7px 25px
-				& .active
-					background #8cc739
-					color #fff
-	&__content
-		clearfix()
-	&__item
-		float left
-		relative
-		margin 0 auto
-		+below(2)
-			width 100%
-		+mobile()
-			width 100%	
-		+desktop()
-			width 20%
+    font bold 20px/1.5 Lato light,serif
+    & .in
+        make-row()
+        padding 100px 0 100px 0
+    &__filter
+        make-row()
+        text-align center
+        ul
+            li
+                display inline-block
+                a
+                    display inline-block
+                    padding 7px 25px 7px 25px
+                & .active
+                    background #8cc739
+                    color #fff
+    &__content
+        clearfix()
+    &__item
+        padding 10px 10px 10px 10px
+        float left
+        position relative
+        text-align center
+        img
+            margin 0 auto
+            width 100%
+        +mobile()
+            width 50%
+        +tablet()
+            width 30%
+        +desktop()
+            width 20%
 .pricing
-	& .in
-		make-row()
-		padding 90px 0 100px 0
-	&__item
-		make-xs-column(12)
-		make-sm-column(6)
-		make-md-column(3)
-		text-align center
-		padding 90px 15px 0 15px
-	&__name
-		text-transform uppercase
-		font 25px/1.5 Lato,serif
-		padding 0 0 22px 0
-	&__quantity
-		font 40px/1.5 Lato,serif
-		padding 0 0 31px 0
-		&__dollar
-			font 38px/1.5 Lato,serif
-		&__month
-			font 14px/1.5 Lato,serif
-	&__specs
-		margin  0 0 20px 0
-		li
-			list-style-type: none
-			border-bottom 1px solid #8a8d94
-			font 13px/1.5 Open Sans,serif
-			padding 10px 0 9px 0
-			color #8a8d94		
+    & .in
+        make-row()
+        padding 90px 0 100px 0
+    &__item
+        make-xs-column(12)
+        make-sm-column(6)
+        make-md-column(3)
+        text-align center
+        padding 90px 15px 0 15px
+    &__name
+        text-transform uppercase
+        font 25px/1.5 Lato,serif
+        padding 0 0 22px 0
+    &__quantity
+        font 40px/1.5 Lato,serif
+        padding 0 0 31px 0
+        &__dollar
+            font 38px/1.5 Lato,serif
+        &__month
+            font 14px/1.5 Lato,serif
+    &__specs
+        margin  0 0 20px 0
+        li
+            list-style-type: none
+            border-bottom 1px solid #8a8d94
+            font 13px/1.5 Open Sans,serif
+            padding 10px 0 9px 0
+            color #8a8d94
 .clients
-	background-color #f2f2f2
-	& .in
-		make-row()
-		padding 100px 0 100px 0
-	&__list
-		li
-			display inline-block
-			margin 0 170px 0 0
-			&:nth-last-child(1)
-				margin 0
-		a
-			color #292626
-			font-size 1.25em
-			display inline-block
-			padding 0 0 0 50px
-			background-repeat no-repeat
-			font 26px/1.5 serif
-		&--1
-			sprite($s-graphicriver)
-			&:hover
-				sprite($s-graphicriver-hover)
-		&--2
-			sprite($s-themeforest)
-			&:hover
-				sprite($s-themeforest-hover)
-		&--3
-			sprite($s-audiojungle)
-			&:hover
-				sprite($s-audiojungle-hover)
-		&--4
-			sprite($s-codecanyon)
-			&:hover
-				sprite($s-codecanyon-hover)
-		&--5
-			sprite($s-activeden)
-			&:hover
-				sprite($s-activeden-hover)
+    background-color #f2f2f2
+    & .in
+        make-row()
+        padding 100px 0 100px 0
+    &__list
+        text-align center
+        margin 50px 0 10px 0
+        li
+            list-style-type none
+            margin 10px 170px 10px 0
+            +above(2)
+                display inline-block
+                margin 0 170px 0 0
+        a
+            color #292626
+            font-size 1.25em
+            display inline-block
+            padding 0 0 0 50px
+            background-repeat no-repeat
+            font 26px/1.5 serif
+        &--1
+            sprite($s-graphicriver)
+            margin 0 0 0 -15px
+            padding 0 0 0 60px !important
+            &:hover
+                sprite($s-graphicriver-hover)
+        &--2
+            sprite($s-themeforest)
+            &:hover
+                sprite($s-themeforest-hover)
+        &--3
+            sprite($s-audiojungle)
+            &:hover
+                sprite($s-audiojungle-hover)
+        &--4
+            sprite($s-codecanyon)
+            &:hover
+                sprite($s-codecanyon-hover)
+        &--5
+            sprite($s-activeden)
+            &:hover
+                sprite($s-activeden-hover)
 .contact
-	& .in
-		make-row()
-		padding 100px 0 100px 0
+    & .in
+        make-row()
+        padding 100px 0 100px 0
 /*--------------------------------------------------*\
-		# Footer
+        # Footer
 \*--------------------------------------------------*/
 .footer
-	min-height: 108px
-	position absolute
-	left 0
-	bottom 0
-	width 100%
-	background-color #f2f2f2
-	font-size 14px
-	& .in
-		make-row()
-		+desktop()
-			padding 35px 0 35px 0
-	&__copy
-		make-xs-column(12)
-		make-sm-column(6)
-		+below(2)
-			padding 55px 0 25px 0
-			text-align center
-	&__social
-		make-xs-column(12)
-		make-sm-column(6)
-		+below(2)
-			padding 25px 0 25px 0
-			text-align center
+    min-height: 108px
+    position absolute
+    left 0
+    bottom 0
+    width 100%
+    background-color #f2f2f2
+    font-size 14px
+    & .in
+        make-row()
+        +desktop()
+            padding 35px 0 35px 0
+    &__copy
+        make-xs-column(12)
+        make-sm-column(6)
+        +below(2)
+            padding 55px 0 25px 0
+            text-align center
+    &__social
+        make-xs-column(12)
+        make-sm-column(6)
+        +below(2)
+            padding 25px 0 25px 0
+            text-align center
 .card
-	display inline-block
-	height 44px
-	width 44px
-	font-size 22px !important
-	+desktop()
-		margin 0 0 0 2px
-	+below(2)
-		margin 0 5px 0 5px
-	&__list
-		+desktop()
-			float right
-	a
-		display inline-block
-		font-size 16px
-		line-height 44px
-		text-align center
-		background-color #ffffff
-		border 1px solid #d3d3d3
-		height 44px
-		width 44px
-	& .front
-		& .fa
-			color #7f7f7f
-	& .back
-		& .fa-facebook
-			color #3b5998
-		& .fa-twitter
-			color #1dcaff
-		& .fa-google-plus
-			color #dd4b39
-		& .fa-linkedin
-			color #006699			
+    display inline-block
+    height 44px
+    width 44px
+    font-size 22px !important
+    +desktop()
+        margin 0 0 0 2px
+    +below(2)
+        margin 0 5px 0 5px
+    &__list
+        +desktop()
+            float right
+    a
+        display inline-block
+        font-size 16px
+        line-height 44px
+        text-align center
+        background-color #ffffff
+        border 1px solid #d3d3d3
+        height 44px
+        width 44px
+    & .front
+        & .fa
+            color #7f7f7f
+    & .back
+        & .fa-facebook
+            color #3b5998
+        & .fa-twitter
+            color #1dcaff
+        & .fa-google-plus
+            color #dd4b39
+        & .fa-linkedin
+            color #006699
