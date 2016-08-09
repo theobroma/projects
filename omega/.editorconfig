@@ -10,5 +10,8 @@ indent_style = space
 charset = utf-8
 insert_final_newline = true
 
+[*.jade]
+indent_size = 4
+
 [*.md]
 trim_trailing_whitespace = false

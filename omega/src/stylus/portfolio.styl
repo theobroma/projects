@@ -1,0 +1,65 @@
+.portfolio
+    font bold 20px/1.5 Lato light,serif
+    & .in
+        /*make-row()*/
+        padding 100px 0 100px 0
+    &__filter
+        make-row()
+        text-align center
+        ul
+            li
+                display inline-block
+                a
+                    display inline-block
+                    padding 7px 25px 7px 25px
+                & .active
+                    background #8cc739
+                    color #fff
+    &__content
+        clearfix()
+    &__item
+        padding 10px 10px 10px 10px
+        float left
+        position relative
+        text-align center
+        margin 0 auto
+        +mobile()
+            width 100%
+        +tablet()
+            width 50%
+        +desktop()
+            width 20%
+    &__img
+        width 100%
+    &__shape-img
+        display block
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        width 3.5em
+        height 3.5em
+        +above(3)
+            width 2em
+            height 2em
+    &__data
+        text-align left
+        position absolute
+        bottom 10%
+        left 10%
+        z-index 9999
+    &__title
+        font-size 1.25em
+        color #000
+        +above(3)
+            font-size 1em
+    &__category
+        font-size 0.9375em
+        color #666
+        +above(3)
+            font-size 0.7em
+.xoverlay
+    &:hover .portfolio__title
+        color #fff
+    &:hover .portfolio__category
+        color #fff

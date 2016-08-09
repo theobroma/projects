@@ -1,0 +1,63 @@
+body
+html
+    height 100%
+body
+    min-height 100%
+    background-color #fff
+    +mobile()
+        font-size 12px
+    +tablet()
+        font-size 14px
+    +above(3)
+        font-size 16px
+div
+    box-sizing border-box
+h3
+    font-size 1.5em
+h2
+    font-size 1.4em
+    font-weight bold
+    font-family Arimo
+a
+    color #000
+    &:hover
+        text-decoration none
+p
+    margin 0 0 4px
+ul
+    padding 0 !important
+.global-wrap
+    min-height 100%
+    position relative
+.mygreen
+    color #8cc739
+.mygreen-bg
+    background-color #8cc739
+.title-bl
+    position relative
+    &:before
+        content: ""
+        display: block
+        width: 70px
+        height: 2px
+        background: #d3d3d3
+        position: absolute
+        top: 190%
+        left: 0px
+    margin 0 0 38px 0
+.description
+    font  2em/1.5 Lato light,serif
+    color #666666
+    margin 2em 0 2em 0
+.container-lg
+    margin 0 auto
+    padding-left 15px
+    padding-right 15px
+    +mobile()
+        /*background-color:red*/
+    +tablet()
+        width 750px
+       /* background-color:yellow*/
+    +above(3)
+        max-width 1920px
+        /*background-color:blue*/

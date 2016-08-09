@@ -1,0 +1,57 @@
+.footer
+    min-height: 108px
+    position absolute
+    left 0
+    bottom 0
+    width 100%
+    background-color #f2f2f2
+    font-size 14px
+    & .in
+        make-row()
+        +desktop()
+            padding 35px 0 35px 0
+    &__copy
+        make-xs-column(12)
+        make-sm-column(6)
+        +below(2)
+            padding 55px 0 25px 0
+            text-align center
+    &__social
+        make-xs-column(12)
+        make-sm-column(6)
+        +below(2)
+            padding 25px 0 25px 0
+            text-align center
+.card
+    display inline-block
+    height 44px
+    width 44px
+    font-size 22px !important
+    +desktop()
+        margin 0 0 0 2px
+    +below(2)
+        margin 0 5px 0 5px
+    &__list
+        +desktop()
+            float right
+    a
+        display inline-block
+        font-size 16px
+        line-height 44px
+        text-align center
+        background-color #ffffff
+        border 1px solid #d3d3d3
+        height 44px
+        width 44px
+    & .front
+        & .fa
+            color #7f7f7f
+    & .back
+        & .fa-facebook
+            color #3b5998
+        & .fa-twitter
+            color #1dcaff
+        & .fa-google-plus
+            color #dd4b39
+        & .fa-linkedin
+            color #006699

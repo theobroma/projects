@@ -1,3 +1,15 @@
+//Mixin for overlay images
+mixin ximg(imgsrc)
+  .portfolio__item
+    .xoverlay.x-simple
+        img.portfolio__img.img-responsive.x-img-main(src=imgsrc, alt="pie-chart")
+        .portfolio__data
+            .portfolio__title Awesome Pie Chart
+            .portfolio__category UI Design
+        .xoverlay-box
+            .xoverlay-data
+                img.portfolio__shape-img(src="../images/shape.png", alt="")
+//Portfolio
 .container
     .in
         .title-bl
@@ -17,43 +29,13 @@
                     a(href="#") Design-3D
 .container-lg
     .portfolio__content
-        .portfolio__item
-            img(src="images/pie-chart.jpg", alt="pie-chart" class ="img-responsive")
-            .portfolio__title Awesome Pie Chart
-            .portfolio__category UI Design
-        .portfolio__item
-            img(src="images/secretlaura.jpg", alt="secretlaura" class ="img-responsive")
-            .portfolio__title Awesome Pie Chart
-            .portfolio__category UI Design
-        .portfolio__item
-            img(src="images/tilt-logo.jpg", alt="tilt-logo" class ="img-responsive")
-            .portfolio__title Awesome Pie Chart
-            .portfolio__category UI Design
-        .portfolio__item
-            img(src="images/sportsman.jpg", alt="sportsman" class ="img-responsive")
-            .portfolio__title Awesome Pie Chart
-            .portfolio__category UI Design
-        .portfolio__item
-            img(src="images/ahhh-monster.jpg", alt="ahhh-monster" class ="img-responsive")
-            .portfolio__title Awesome Pie Chart
-            .portfolio__category UI Design
-        .portfolio__item
-            img(src="images/bag.jpg", alt="bag" class ="img-responsive")
-            .portfolio__title Awesome Pie Chart
-            .portfolio__category UI Design
-        .portfolio__item
-            img(src="images/hytek.jpg", alt="hytek" class ="img-responsive")
-            .portfolio__title Awesome Pie Chart
-            .portfolio__category UI Design
-        .portfolio__item
-            img(src="images/dolphin.jpg", alt="dolphin" class ="img-responsive")
-            .portfolio__title Awesome Pie Chart
-            .portfolio__category UI Design
-        .portfolio__item
-            img(src="images/unbeanannt.jpg", alt="unbeanannt" class ="img-responsive")
-            .portfolio__title Awesome Pie Chart
-            .portfolio__category UI Design
-        .portfolio__item
-            img(src="images/kidsquest.jpg", alt="kidsquest" class ="img-responsive")
-            .portfolio__title Awesome Pie Chart
-            .portfolio__category UI Design
+        +ximg("../images/pie-chart.jpg")
+        +ximg("../images/secretlaura.jpg")
+        +ximg("../images/tilt-logo.jpg")
+        +ximg("../images/sportsman.jpg")
+        +ximg("../images/ahhh-monster.jpg")
+        +ximg("../images/bag.jpg")
+        +ximg("../images/hytek.jpg")
+        +ximg("../images/dolphin.jpg")
+        +ximg("../images/unbeanannt.jpg")
+        +ximg("../images/kidsquest.jpg")
