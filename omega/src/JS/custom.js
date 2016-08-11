@@ -7,9 +7,67 @@ $(document).ready(gwPadding);                                 //  Вызов ф�
 $(window).resize(gwPadding);                                  //  Вызов функции при изменении ширины окна
 /*
 # ===============================================
-# Portfolio img hover
+#   Owl-carousel
 # ===============================================
 */
+$(document).ready(function() {
+
+  var owl = $("#owl-demo");
+
+  owl.owlCarousel({
+      items : 4, //10 items above 1000px browser width
+      itemsDesktop : [1000,4], //5 items between 1000px and 901px
+      itemsDesktopSmall : [900,2], // betweem 900px and 601px
+      itemsTablet: [600,1], //2 items between 600 and 0
+      itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
+      afterAction : syncPosition,
+          //Pagination
+    pagination : false,
+    paginationNumbers: true,
+
+     // Other
+    addClassActive : false,
+    afterInit : function(el){
+      console.log(el.find(".owl-item"));
+      el.find(".owl-item").eq(0).addClass("synced");
+    }
+  });
+
+   function syncPosition(el){
+    var current = this.currentItem;
+    $("#sync2")
+      .find(".owl-item")
+      .removeClass("synced")
+      .eq(current)
+      .addClass("synced")
+    if($("#sync2").data("owlCarousel") !== undefined){
+      center(current)
+    }
+  }
+
+
+  // Custom Navigation Events
+  $(".next").click(function(){
+    owl.trigger('owl.next');
+  })
+  $(".prev").click(function(){
+    owl.trigger('owl.prev');
+  })
+  $(".play").click(function(){
+    owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
+  })
+  $(".stop").click(function(){
+    owl.trigger('owl.stop');
+  })
+
+});
+
+$(function() {
+  $('progress').each(function() {
+        var max = $(this).val();
+        $(this).val(0).animate({ value: max }, { duration: 2000, easing: 'easeOutCirc' });
+    });
+});
 
 /*
 # ===============================================
@@ -66,32 +124,6 @@ $(".whatwedo__card").flip({
 });
 /*
 # ===============================================
-#   Tabs
-# ===============================================
-*/
-$(document).ready(function(){
-    var tabs = $('#tabs');
-    $('.tabs__content > div', tabs).each(function(i){
-        if ( i != 0 ) $(this).hide(0);
-    });
-    tabs.on('click', '.tab__link', function(e){
-        /* Предотвращаем стандартную обработку клика по ссылке */
-        e.preventDefault();
-
-        /* Узнаем значения ID блока, который нужно отобразить */
-        var tabId = $(this).attr('href');
-
-        /* Удаляем все классы у якорей и ставим active текущей вкладке */
-        $('.tab__link',tabs).removeClass();
-        $(this).addClass('active');
-
-        /* Прячем содержимое всех вкладок и отображаем содержимое нажатой */
-        $('.tabs-content > div', tabs).hide(0);
-        $(tabId).show();
-    });
-});
-/*
-# ===============================================
 #  CountUp
 # ===============================================
 */
@@ -123,136 +155,3 @@ $('.parallax__item').waypoint(function() {
 #  Progress Bars
 # ===============================================
 */
-/*Parameters*/
-//1
-$(document).ready(function(){
-    $('#skill-11').goalProgress({
-        goalAmount: 100,
-        currentAmount: 99.9,
-        textBefore: '',
-        textAfter: ''
-    });
-});
-$(document).ready(function(){
-    $('#skill-12').goalProgress({
-        goalAmount: 100,
-        currentAmount: 95,
-        textBefore: '',
-        textAfter: ''
-    });
-});
-$(document).ready(function(){
-    $('#skill-13').goalProgress({
-        goalAmount: 100,
-        currentAmount: 80,
-        textBefore: '',
-        textAfter: ''
-    });
-});
-$(document).ready(function(){
-    $('#skill-14').goalProgress({
-        goalAmount: 100,
-        currentAmount: 45,
-        textBefore: '',
-        textAfter: ''
-    });
-});
-//2
-$(document).ready(function(){
-    $('#skill-21').goalProgress({
-        goalAmount: 100,
-        currentAmount: 99.9,
-        textBefore: '',
-        textAfter: ''
-    });
-});
-$(document).ready(function(){
-    $('#skill-22').goalProgress({
-        goalAmount: 100,
-        currentAmount: 95,
-        textBefore: '',
-        textAfter: ''
-    });
-});
-$(document).ready(function(){
-    $('#skill-23').goalProgress({
-        goalAmount: 100,
-        currentAmount: 80,
-        textBefore: '',
-        textAfter: ''
-    });
-});
-$(document).ready(function(){
-    $('#skill-24').goalProgress({
-        goalAmount: 100,
-        currentAmount: 45,
-        textBefore: '',
-        textAfter: ''
-    });
-});
-//3
-$(document).ready(function(){
-    $('#skill-31').goalProgress({
-        goalAmount: 100,
-        currentAmount: 99.9,
-        textBefore: '',
-        textAfter: ''
-    });
-});
-$(document).ready(function(){
-    $('#skill-32').goalProgress({
-        goalAmount: 100,
-        currentAmount: 95,
-        textBefore: '',
-        textAfter: ''
-    });
-});
-$(document).ready(function(){
-    $('#skill-33').goalProgress({
-        goalAmount: 100,
-        currentAmount: 80,
-        textBefore: '',
-        textAfter: ''
-    });
-});
-$(document).ready(function(){
-    $('#skill-34').goalProgress({
-        goalAmount: 100,
-        currentAmount: 45,
-        textBefore: '',
-        textAfter: ''
-    });
-});
-//4
-$(document).ready(function(){
-    $('#skill-41').goalProgress({
-        goalAmount: 100,
-        currentAmount: 99.9,
-        textBefore: '',
-        textAfter: ''
-    });
-});
-$(document).ready(function(){
-    $('#skill-42').goalProgress({
-        goalAmount: 100,
-        currentAmount: 95,
-        textBefore: '',
-        textAfter: ''
-    });
-});
-$(document).ready(function(){
-    $('#skill-43').goalProgress({
-        goalAmount: 100,
-        currentAmount: 80,
-        textBefore: '',
-        textAfter: ''
-    });
-});
-$(document).ready(function(){
-    $('#skill-44').goalProgress({
-        goalAmount: 100,
-        currentAmount: 45,
-        textBefore: '',
-        textAfter: ''
-    });
-});

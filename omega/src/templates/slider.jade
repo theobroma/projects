@@ -1,175 +1,88 @@
+//Mixins
+mixin sliderimg(imgsrc)
+    .slider__item
+        .xoverlay.x-simple
+            img.slider__img.img-responsive.x-img-main(src=imgsrc, alt="slider-images")
+            .xoverlay-box
+                .xoverlay-data
+    .triangle
+mixin skills(s1,s2,s3,s4)
+    section.skills_bars
+        span Wordpress(#{s1}%)
+        progress(value=s1, max='100')
+        span Python(#{s2}%)
+        progress(value=s2, max='100')
+        span Adobe Illustrator(#{s3}%)
+        progress(value=s3, max='100')
+        span Content Development(#{s4}%)
+        progress(value=s4, max='100')
+mixin info(name)
+    .tab__name
+        h3 #{name}
+    .tab__post
+        | Founder
+    .tab__description
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
+    .tab__social
+        ul
+            li
+                a(href="#")
+                    i.fa.fa-facebook
+            li
+                a(href="#")
+                    i.fa.fa-twitter
+            li
+                a(href="#")
+                    i.fa.fa-pinterest
+//Main
 .container
-	.in
-		.title-bl
-			h2 Meat the team
-		.description Be it any business you run, we can give you an exceptional branding & great marketing strategies.
-		//- #myCarousel.carousel.slide
-		//- 	.carousel-inner
-		//- 		.active.item 
-		//- 			img(src="/images/photo1.jpg", alt="")
-		//- 		.item
-		//- 			img(src="/images/photo2.jpg", alt="")
-		//- 		.item
-		//- 			img(src="/images/photo3.jpg", alt="")
-		//- 		.item
-		//- 			img(src="/images/photo4.jpg", alt="")
-		//- 	a(class='carousel-control left' href='#myCarousel' data-slide='prev')
-		//- 	a(class='carousel-control right' href='#myCarousel' data-slide='next')
-#tabs
-	.container
-		.in
-			ul
-				li
-					a( class= "tab__link active" href="#tab-1") John Donga
-				li
-					a( class= "tab__link" href="#tab-2") John Donga 222
-				li
-					a( class= "tab__link" href="#tab-3") John Donga 333
-				li
-					a( class= "tab__link" href="#tab-4") John Donga 444	 	
-	.container
-		.tabs__content
-			#tab-1.tab
-				.tab__item
-					.tab__name
-						h3 John Donga
-					.tab__post
-						| Founder
-					.tab__description
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.	
-					.tab__social
-						ul
-							li
-								a(href="#")
-									i.fa.fa-facebook
-							li
-								a(href="#")
-									i.fa.fa-twitter
-							li
-								a(href="#")
-									i.fa.fa-pinterest
-				.tab__item						
-					.tab__skill
-						h4 Wordpress(99.9%)
-						.tab__skill__outer
-							#skill-11
-					.tab__skill
-						h4 Python(95%)
-						.tab__skill__outer
-							#skill-12
-					.tab__skill
-						h4 Adobe Illustrator(80%)
-						.tab__skill__outer
-							#skill-13
-					.tab__skill
-						h4 Content Development(45%)
-						.tab__skill__outer
-							#skill-14
-			#tab-2.tab
-				.tab__item
-					.tab__name
-						h3 John Donga 222
-					.tab__post
-						| Founder 222
-					.tab__description
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.	
-					.tab__social
-						ul
-							li
-								a(href="#")
-									i.fa.fa-facebook
-							li
-								a(href="#")
-									i.fa.fa-twitter
-							li
-								a(href="#")
-									i.fa.fa-pinterest
-				.tab__item						
-					.tab__skill
-						h4 Wordpress(99.9%)
-						.tab__skill__outer
-							#skill-21
-					.tab__skill
-						h4 Python(95%)
-						.tab__skill__outer
-							#skill-22
-					.tab__skill
-						h4 Adobe Illustrator(80%)
-						.tab__skill__outer
-							#skill-23
-					.tab__skill
-						h4 Content Development(45%)
-						.tab__skill__outer
-							#skill-24
-			#tab-3.tab
-				.tab__item
-					.tab__name
-						h3 John Donga 333
-					.tab__post
-						| Founder 333
-					.tab__description
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.	
-					.tab__social
-						ul
-							li
-								a(href="#")
-									i.fa.fa-facebook
-							li
-								a(href="#")
-									i.fa.fa-twitter
-							li
-								a(href="#")
-									i.fa.fa-pinterest
-				.tab__item						
-					.tab__skill
-						h4 Wordpress(99.9%)
-						.tab__skill__outer
-							#skill-31
-					.tab__skill
-						h4 Python(95%)
-						.tab__skill__outer
-							#skill-32
-					.tab__skill
-						h4 Adobe Illustrator(80%)
-						.tab__skill__outer
-							#skill-33
-					.tab__skill
-						h4 Content Development(45%)
-						.tab__skill__outer
-							#skill-34
-			#tab-4.tab
-				.tab__item
-					.tab__name
-						h3 John Donga 444
-					.tab__post
-						| Founder 444
-					.tab__description
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.	
-					.tab__social
-						ul
-							li
-								a(href="#")
-									i.fa.fa-facebook
-							li
-								a(href="#")
-									i.fa.fa-twitter
-							li
-								a(href="#")
-									i.fa.fa-pinterest
-				.tab__item						
-					.tab__skill
-						h4 Wordpress(99.9%)
-						.tab__skill__outer
-							#skill-41
-					.tab__skill
-						h4 Python(95%)
-						.tab__skill__outer
-							#skill-42
-					.tab__skill
-						h4 Adobe Illustrator(80%)
-						.tab__skill__outer
-							#skill-43
-					.tab__skill
-						h4 Content Development(45%)
-						.tab__skill__outer
-							#skill-44
+    .in
+        .title-bl
+            h2 Meat the team
+        .description Be it any business you run, we can give you an exceptional branding & great marketing strategies.
+        .omega-carousel
+            .customNavigation
+                a.btn.prev Previous
+                a.btn.next Next
+                a.btn.play Autoplay
+                a.btn.stop Stop
+            #owl-demo.owl-carousel.owl-theme
+                .item.active
+                    +sliderimg("images/photo1.jpg")
+                .item
+                    +sliderimg("images/photo2.jpg")
+                .item
+                    +sliderimg("images/photo3.jpg")
+                .item
+                    +sliderimg("images/photo4.jpg")
+                .item
+                    +sliderimg("images/photo1.jpg")
+                .item
+                    +sliderimg("images/photo2.jpg")
+                .item
+                    +sliderimg("images/photo3.jpg")
+                .item
+                    +sliderimg("images/photo4.jpg")
+.skills-wrapper
+    .container
+        .tabs__content
+            #tab-1.tab
+                .tab__item
+                    +info("John Donga111")
+                .tab__item
+                    +skills(99.9,95,80,45)
+            #tab-2.tab
+                .tab__item
+                    +info("John Donga222")
+                .tab__item
+                    +skills(45,95,90,65)
+            #tab-3.tab
+                .tab__item
+                    +info("John Donga333")
+                .tab__item
+                    +skills(55,65,90,85)
+            #tab-4.tab
+                .tab__item
+                    +info("John Donga444")
+                .tab__item
+                    +skills(75,95,80,75)

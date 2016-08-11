@@ -78,6 +78,7 @@ gulp.task('sprite', function() {
 gulp.task('concat', function(){
 	return gulp.src([
 			paths.jsSrc + '/jquery.js',
+            paths.jsSrc + '/jquery-ui.js',
 			paths.jsSrc + '/bootstrap.js',
 			paths.jsSrc + '/vendor/*.js',
 			paths.jsSrc + '/custom.js'

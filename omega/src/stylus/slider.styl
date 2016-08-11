@@ -1,56 +1,107 @@
+#owl-demo
+  .item
+    padding 28px 0px
+    margin 10px
+    color #FFF
+    -webkit-border-radius 3px
+    -moz-border-radius 3px
+    border-radius 3px
+    text-align center
+.customNavigation
+  text-align center
+  a
+    user-select none
+.triangle
+  position absolute
+  left 45%
+  &:after
+    content ''
+    position absolute
+    border 20px solid transparent
+    border-bottom 20px solid #262626
+.skills-wrapper
+    background-color #262626
+//Skill Bars
+.skills_bars
+    span
+        top -30px
+        float right
+        position relative
+        font-size 1.4em
+        font-weight bolder
+        font-family monospace
+        color #fff
+    progress
+      width 100%
+      height 14px
+      margin 50px auto
+      display block
+      -webkit-appearance none
+      border none
+      &::-webkit-progress-bar
+        background black
+        border-radius 50px
+        padding 2px
+        box-shadow 0 1px 0px 0 rgba(255, 255, 255, 0.2)
+      &::-webkit-progress-value
+        border-radius 50px
+        box-shadow inset 0 1px 1px 0 rgba(255, 255, 255, 0.4)
+        background #8cc739
+        -webkit-animation move 5s linear 0 infinite
+//Old
 .tabs
-	background-position: 0 0;
-	background-repeat: repeat;
-	background-image: url(../images/slider-pattern-bg.jpg);
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-image: url(../images/slider-pattern-bg.jpg);
 .tab
-	make-xs-column(12)
-	&__item
-		make-xs-column(12)
-		make-sm-column(12)
-		make-md-column(6)
-	&__name
-		color #fff
-	&__post
-		color #8cc739
-	&__description
-		color #949494
-	&__social
-		li
-			display inline-block
-			a
-				display inline-block
-				color #8cc739
-	&__skill
-		make-xs-column(12)
-		h4
-			color #fafafa
-			float right
-			font-size 14px
-		&__outer
-			background #6b6b6b
-			make-xs-column(12)
-			border-radius 5px
+    make-xs-column(12)
+    &__item
+        make-xs-column(12)
+        make-sm-column(12)
+        make-md-column(6)
+    &__name
+        color #fff
+    &__post
+        color #8cc739
+    &__description
+        color #949494
+    &__social
+        li
+            display inline-block
+            a
+                display inline-block
+                color #8cc739
+    &__skill
+        make-xs-column(12)
+        h4
+            color #fafafa
+            float right
+            font-size 14px
+        &__outer
+            background #6b6b6b
+            make-xs-column(12)
+            border-radius 5px
 /*
 # ===============================================
-#	Proress Bars   
+#   Proress Bars
 # ===============================================
 */
 .goalProgress {
-	padding: 5px;
+    padding: 5px;
 }
 div.progressBar {
-	background: #8cc739;
-	color: #fff;
-	font-size: 1.5em;
-	font-family: 'helvetica neue', helvetica, arial, sans-serif;
-	letter-spacing: -1px;
-	font-weight: 700;
-	padding: 10px;
-	display: block;
-	overflow: hidden;
-	width: 20px;
+    background: #8cc739;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+    letter-spacing: -1px;
+    font-weight: 700;
+    padding: 10px;
+    display: block;
+    overflow: hidden;
+    width: 20px;
 }
 span.goalAmount {
-	display: none;
-	text-indent: -9999px;
+    display: none;
+    text-indent: -9999px;
 }
