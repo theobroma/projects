@@ -1,19 +1,24 @@
 #owl1
   .owl-item
-    padding 28px 0px
+    padding 20px 0px
     margin 10px
     color #FFF
     -webkit-border-radius 3px
     -moz-border-radius 3px
     border-radius 3px
     text-align center
-.customNavigation
-  text-align center
-  a
-    user-select none
+    &.synced .item
+        border 5px solid $mygreen
+        .triangle
+            display block
+.owl
+   &__navigation
+      a:active
+        box-shadow none
 .triangle
   position absolute
   left 45%
+  display none
   &:after
     content ''
     position absolute
@@ -21,13 +26,6 @@
     border-bottom 20px solid #262626
 .skills-wrapper
     background-color #262626
-//Skill Bars
-
-//Old
-.tabs
-    background-position: 0 0;
-    background-repeat: repeat;
-    background-image: url(../images/slider-pattern-bg.jpg);
 .tab
     make-xs-column(12)
     &__item

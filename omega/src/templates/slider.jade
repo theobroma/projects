@@ -35,17 +35,17 @@ mixin info(name)
             li
                 a(href="#")
                     i.fa.fa-pinterest
-//Main
+//Main------------------------------------------------------------
 .container
     .in
         .title-bl
             h2 Meat the team
         .description Be it any business you run, we can give you an exceptional branding & great marketing strategies.
-        .omega-carousel
-            .customNavigation
-                a.btn.prev
+        .owl__wrap
+            .owl__navigation
+                a.btn#owl-prev
                     img(src = "images/chevrone-left.png")
-                a.btn.next
+                a.btn#owl-next
                     img(src = "images/chevrone-right.png")
             #owl1.owl-carousel.owl-theme
                     +sliderimg("images/photo1.jpg")
@@ -77,5 +77,25 @@ mixin info(name)
             #tab-4.tab
                 .tab__item
                     +info("John Donga444")
+                .tab__item
+                    +skills(75,95,80,75)
+            #tab-5.tab
+                .tab__item
+                    +info("John Donga555")
+                .tab__item
+                    +skills(99.9,95,80,45)
+            #tab-6.tab
+                .tab__item
+                    +info("John Donga666")
+                .tab__item
+                    +skills(45,95,90,65)
+            #tab-7.tab
+                .tab__item
+                    +info("John Donga777")
+                .tab__item
+                    +skills(55,65,90,85)
+            #tab-8.tab
+                .tab__item
+                    +info("John Donga888")
                 .tab__item
                     +skills(75,95,80,75)

@@ -15,88 +15,63 @@ $(document).ready(function() {
   var owl = $("#owl1");
   var owl2 = $("#owl2");
 
-  owl.owlCarousel({
-    items : 4, //10 items above 1000px browser width
-    itemsDesktop : [1000,4], //5 items between 1000px and 901px
-    itemsDesktopSmall : [900,2], // betweem 900px and 601px
-    itemsTablet: [600,1], //2 items between 600 and 0
-    itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
-    afterAction : syncPosition,
-    //Pagination
-    pagination : false,
-    paginationNumbers: true,
-     // Other
-    addClassActive : false,
-    afterInit : function(el){
-      console.log(el.find(".owl-item"));
-      el.find(".owl-item").eq(0).addClass("synced");
-    }
-  });
+    owl.owlCarousel({
+        items : 4, // items above 1000px browser width
+        itemsDesktop : [1000,2], // items between 1000px and 901px
+        itemsDesktopSmall : [900,2], // betweem 900px and 601px
+        itemsTablet: [600,1], // items between 600 and 0
+        itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
+        afterAction : syncPosition,
+        //Pagination
+        pagination : false,
+        paginationNumbers: true,
+         // Other
+        addClassActive : false,
+        afterInit : function(el){
+          el.find(".owl-item").eq(0).addClass("synced");
+        }
+    });
 
     owl2.owlCarousel({
         singleItem : true,
         slideSpeed : 1000,
-        navigation: true,
+        navigation: false,
         pagination:false,
         //Pagination
         pagination : false,
          // Other
         addClassActive : false
-  });
+    });
 
-
-
-
-   function syncPosition(el){
-    var current = this.currentItem;
-    console.log('current: ',current);
-    $("#owl2")
-      .find(".owl-item")
-      .removeClass("synced")
-      .eq(current)
-      .addClass("synced")
-    if($("#owl2").data("owlCarousel") !== undefined){
-      center(current)
-    }
-  }
-
-    function center(number){
-    var sync2visible = owl2.data("owlCarousel").owl.visibleItems;
-    var num = number;
-    var found = false;
-
-        for(var i in sync2visible){
-          if(num === sync2visible[i]){
-            var found = true;
-          }
-        }
+    function syncPosition(el){
+        console.log('syncPosition');
+        var current = this.currentItem;
+        owl2.trigger("owl.goTo",current);
+        $("#owl1")
+            .find(".owl-item")
+            .removeClass("synced")
+            .eq(current)
+            .addClass("synced")
     }
 
-/*  function afterAction(){
-    console.log("owlItems.length: ",this.owl.owlItems.length);
-    console.log("this.owl.currentItem: ",this.owl.currentItem);
-    console.log("this.prevItem: ",this.prevItem);
-    console.log("owl.visibleItems: ",this.owl.visibleItems);
-    console.log("owl.dragDirection: ",this.owl.dragDirection);
-  }*/
-
+    $("#owl1").on("click", ".owl-item", function(e){
+        e.preventDefault();
+        var number = $(this).data("owlItem");
+        owl.trigger("owl.goTo",number);
+        owl2.trigger("owl.goTo",number);
+    });
 
   // Custom Navigation Events
-  $(".next").click(function(){
+  $("#owl-next").click(function(){
     owl.trigger('owl.next');
   })
-  $(".prev").click(function(){
+
+  $("#owl-prev").click(function(){
     owl.trigger('owl.prev');
-  })
-  $(".play").click(function(){
-    owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
-  })
-  $(".stop").click(function(){
-    owl.trigger('owl.stop');
   })
 
 });
-
+//Skill progress bars
 $(function() {
   $('progress').each(function() {
         var max = $(this).val();
@@ -183,10 +158,3 @@ $('.parallax__item').waypoint(function() {
 },{
     offset: '90%'
 });
-
-
-/*
-# ===============================================
-#  Progress Bars
-# ===============================================
-*/
