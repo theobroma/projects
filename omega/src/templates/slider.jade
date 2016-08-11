@@ -1,11 +1,12 @@
 //Mixins
 mixin sliderimg(imgsrc)
-    .slider__item
-        .xoverlay.x-simple
-            img.slider__img.img-responsive.x-img-main(src=imgsrc, alt="slider-images")
-            .xoverlay-box
-                .xoverlay-data
-    .triangle
+    .item
+        .slider__item
+            .xoverlay.x-simple
+                img.slider__img.img-responsive.x-img-main(src=imgsrc, alt="slider-images")
+                .xoverlay-box
+                    .xoverlay-data
+        .triangle
 mixin skills(s1,s2,s3,s4)
     section.skills_bars
         span Wordpress(#{s1}%)
@@ -42,30 +43,22 @@ mixin info(name)
         .description Be it any business you run, we can give you an exceptional branding & great marketing strategies.
         .omega-carousel
             .customNavigation
-                a.btn.prev Previous
-                a.btn.next Next
-                a.btn.play Autoplay
-                a.btn.stop Stop
-            #owl-demo.owl-carousel.owl-theme
-                .item.active
+                a.btn.prev
+                    img(src = "images/chevrone-left.png")
+                a.btn.next
+                    img(src = "images/chevrone-right.png")
+            #owl1.owl-carousel.owl-theme
                     +sliderimg("images/photo1.jpg")
-                .item
                     +sliderimg("images/photo2.jpg")
-                .item
                     +sliderimg("images/photo3.jpg")
-                .item
                     +sliderimg("images/photo4.jpg")
-                .item
                     +sliderimg("images/photo1.jpg")
-                .item
                     +sliderimg("images/photo2.jpg")
-                .item
                     +sliderimg("images/photo3.jpg")
-                .item
                     +sliderimg("images/photo4.jpg")
 .skills-wrapper
     .container
-        .tabs__content
+        #owl2.owl-carousel.owl-theme
             #tab-1.tab
                 .tab__item
                     +info("John Donga111")

@@ -12,19 +12,19 @@ $(window).resize(gwPadding);                                  //  Вызов ф�
 */
 $(document).ready(function() {
 
-  var owl = $("#owl-demo");
+  var owl = $("#owl1");
+  var owl2 = $("#owl2");
 
   owl.owlCarousel({
-      items : 4, //10 items above 1000px browser width
-      itemsDesktop : [1000,4], //5 items between 1000px and 901px
-      itemsDesktopSmall : [900,2], // betweem 900px and 601px
-      itemsTablet: [600,1], //2 items between 600 and 0
-      itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
-      afterAction : syncPosition,
-          //Pagination
+    items : 4, //10 items above 1000px browser width
+    itemsDesktop : [1000,4], //5 items between 1000px and 901px
+    itemsDesktopSmall : [900,2], // betweem 900px and 601px
+    itemsTablet: [600,1], //2 items between 600 and 0
+    itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
+    afterAction : syncPosition,
+    //Pagination
     pagination : false,
     paginationNumbers: true,
-
      // Other
     addClassActive : false,
     afterInit : function(el){
@@ -33,17 +33,52 @@ $(document).ready(function() {
     }
   });
 
+    owl2.owlCarousel({
+        singleItem : true,
+        slideSpeed : 1000,
+        navigation: true,
+        pagination:false,
+        //Pagination
+        pagination : false,
+         // Other
+        addClassActive : false
+  });
+
+
+
+
    function syncPosition(el){
     var current = this.currentItem;
-    $("#sync2")
+    console.log('current: ',current);
+    $("#owl2")
       .find(".owl-item")
       .removeClass("synced")
       .eq(current)
       .addClass("synced")
-    if($("#sync2").data("owlCarousel") !== undefined){
+    if($("#owl2").data("owlCarousel") !== undefined){
       center(current)
     }
   }
+
+    function center(number){
+    var sync2visible = owl2.data("owlCarousel").owl.visibleItems;
+    var num = number;
+    var found = false;
+
+        for(var i in sync2visible){
+          if(num === sync2visible[i]){
+            var found = true;
+          }
+        }
+    }
+
+/*  function afterAction(){
+    console.log("owlItems.length: ",this.owl.owlItems.length);
+    console.log("this.owl.currentItem: ",this.owl.currentItem);
+    console.log("this.prevItem: ",this.prevItem);
+    console.log("owl.visibleItems: ",this.owl.visibleItems);
+    console.log("owl.dragDirection: ",this.owl.dragDirection);
+  }*/
 
 
   // Custom Navigation Events
